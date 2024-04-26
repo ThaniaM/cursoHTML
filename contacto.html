@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!---incluye la mayoria de los caracteres utilizados en la mayoria de los idiomas-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title> <!--nombre que aparece en la ventana del navegador -->
+  <link rel="icon" href="/images/favicon.png" type="image/png" sizes="16x16"/><!--icono en la pestaña del navegador debe ser png-->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!--encabezado-->
+  <header>
+    <h1>Enviar un mensaje</h1>
+    <time datetime="2024-04-11" pubdate>publicado 11-04-2024</time>
+  </header>
+  <!--barra de navegacion-->
+  <nav>
+    <a href="index.html">Pricipal</a>|
+    <a href="fotos.html">Fotos</a>|
+    <a href="videos.html">Videos</a>|
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <!--contenido-->
+  <main>
+    <section id="noticias">
+      <article>
+        Este es el texto del primer articulo
+      </article>
+      <article>
+        Este es el texto del segundo articulo
+      </article>
+    </section>
+    <section id="noticiaslocales">
+      <article>
+        Este es el texto del primer articulo local
+      </article>
+      <article>
+        Este es el texto del segundo articulo local
+      </article>
+    </section>
+    <section>
+      <div class="libros">Libro: El arte de la programación 1</div>
+      <div class="libros">Libro: El arte de la programación 2</div>
+      <div class="libros">Libro: El arte de la programación 3</div>
+      <div class="libros">Libro: El arte de la programación 4</div>
+      <article>
+        <pre>
+          La muerte es una quimera: porque mientras yo existo, no existe la muerte;
+          y cuando existe la muerte, ya no existo yo.
+          Epiluro de Samos
+        </pre>
+      </article>
+      <article>
+        <p>La muerte es una quimera: porque mientras yo existo, no existe la muerte; <br>
+          y cuando existe la muerte, ya no existo yo. <br>
+          Epiluro de Samos</p>
+      </article>
+      <article>
+        <p>La muerte es una <em>quimera</em> : porque mientras yo existo, no existe la <i>muerte</i>; <br>
+          y cuando existe la <i> muerte</i>,  <strong>ya no existo yo</strong>. <br>
+          Epiluro de Samos</p>
+      </article>
+      <article>
+        <pre>
+          <script>
+      function cambiarColor(){
+        document.body.style.backgroundColor = "#000FF";
+      }
+      document.addEventListener("click", cambiarColor);
+          </script>
+        </pre>
+      </article>
+    </section>
+    <aside>
+      <p>Cita del articulo uno</p>
+      <p>Cita del articulo dos</p>
+    </aside>
+  </main>
+  <footer>
+    <a href=""></a>
+  </footer>
+</body>
+</html>
