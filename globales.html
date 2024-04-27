@@ -11,20 +11,199 @@
   <!--icono en la pestaña del navegador debe ser png-->
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <!--encabezado-->
-    <header>
-      <h1>Este es el titulo</h1>
-      <time datetime="2024-04-11" pubdate>publicado 11-04-2024</time>
-    </header>
-    <!--barra de navegacion-->
-    <nav>
-      <a href="index.html">Principal</a>|
-      <a href="fotos.html">Fotos</a>|
-      <a href="videos.html">Videos</a>|
-      <a href="contacto.html">Contacto</a>
-      <a href="globales.html">Globales</a>
-    </nav>
-  
+  <!--encabezado-->
+  <header>
+    <h1>Este es el titulo</h1>
+    <time datetime="2024-04-11" pubdate>publicado 11-04-2024</time>
+  </header>
+  <!--barra de navegacion-->
+  <nav>
+    <a href="index.html">Principal</a>|
+    <a href="fotos.html">Fotos</a>|
+    <a href="videos.html">Videos</a>|
+    <a href="contacto.html">Contacto</a>
+    <a href="globales.html">Globales</a>
+  </nav>
+  <p>My favorite movie is <span translate="no">Two Roads</span></p>
+  <p>My favorite movie is <span contenteditable>Two Roads</span></p>
+  <!---FORMULARIOA-->
+  <section>
+    <h2>Formulario Inicial</h2>
+    <form name="formulario" method="get" action="procesar.php">
+      <!---incluyendo las herramientas de un formulario-->
+      <p>
+        <label>Nombre: <input type="text" name="nombre"></label>
+      </p>
+      <p>
+        <label>Edad: <input type="text" name="edad" value="35"></label>
+      </p>
+      <!--declarar valor inicial del campo-->
+      <p><input type="submit" value="Enviar Datos"></p>
+      <!---value cambia el texto del input-->
+    </form>
+  </section>
+  <!---asociar etiquetas con el atributo for, con el tipo de dato-->
+  <section>
+    <h2>Formulario con tipo de dato</h2>
+    <form name="formulario1" method="get" action="procesar1.php">
+      <p>
+        <label for="nombre">Nombre:<input type="text" name="nombre" id="nombre" maxlength="15"></label>
+      </p>
+      <p>
+        <label for="edad">Edad:<input type="number" name="edad" id="edad"></label>
+      </p>
+      <p>
+        <label for="correo">Correo:<input type="email" name="correo" id="correo"></label>
+      </p>
+      <p>
+        <label for="telefono">Telefóno:<input type="tel" name="telefono" id="telefono"></label>
+      </p>
+      <p>
+        <label for="sitioweb">Sitio Web:<input type="url" name="sitioweb" id="sitioweb"></label>
+      </p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!--campos de entrada de tipo radio-->
+  <section>
+    <h2>Formulario tipo de entrada radio</h2>
+    <form name="formulario2" method="get" action="procesar2.php">
+      <p><label>Nombre: <input type="text" name="nombre" maxlength="15"></label></p>
+      <p><label><input type="radio" name="edad" value="15" checked> 15
+          Años</label></p>
+      <p><label><input type="radio" name="edad" value="30"> 30
+          Años</label></p>
+      <p><label><input type="radio" name="edad" value="45"> 45
+          Años</label></p>
+      <p><label><input type="radio" name="edad" value="60"> 60
+          Años</label></p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!--Formulario con entrada de tipos checkbox-->
+  <section>
+    <h2>Formulario con entrada de tipo checkbox</h2>
+    <form name="formulario4" method="get" action="procesar4.php">
+      <p><label>Nombre: <input type="text" name="nombre" maxlength="15"></label></p>
+      <p><label><input type="checkbox" name="edad15" value="15" checked> 15
+          Años</label></p>
+      <p><label><input type="checkbox" name="edad30" value="30" checked> 30
+          Años</label></p>
+      <p><label><input type="checkbox" name="edad45" value="45"> 45
+          Años</label></p>
+      <p><label><input type="checkbox" name="edad60" value="60"> 60
+          Años</label></p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+
+  </section>
+  <!--campos adicionales-->
+  <section>
+    <h2>Formulario de ejemplo de campos adicionales</h2>
+    <form name="formulario" method="get" action="procesar.php">
+      <progress value="30" max="100">0%</progress><br>
+      <meter value="70" min="0" max="100" low="40" high="80" optimum="100">60</meter><br>
+      <!--el color de la barra depende el valor que tenga-->
+
+      <input type="date" name="fecha" value="2017-02-05"><br><br>
+      <input type="color" name="micolor" value="#99BB00">
+      <!--agregando el elemento textarea-->
+      <p><label>Texto: <textarea name="texto" cols="50" rows="6"></textarea></label></p>
+      <!---campo select, envia al servidor lo contenido en value-->
+      <p>
+        <label for="listado">Libros: </label>
+        <select name="libro" id="listado">
+          <option value="1">IT</option>
+          <option value="2">Carrie</option>
+          <option value="3">El Resplandor</option>
+          <option value="4">Misery</option>
+        </select>
+      </p>
+      <!--creando una lista de valores-->
+      <datalist id="datos">
+        <option value="123123123" label="Teléfono 1">
+        <option value="456456456" label="Teléfono 2">
+      </datalist>
+      <p><label>Teléfono: <input type="tel" name="telefono" list="datos"></label></p>
+      <!--nombre que aparece en la lista de datos-->
+      <!--campo de entrada de tipo imagen-->
+      <p><input type="image" src="./images/botonenviar.png" width="100"></p>
+      <p><button type="submit">Enviar Formulario</button></p>
+
+    </form>
+
+  </section>
+  <!--atributos adicionales-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Nombre: <input type="text" name="nombre" placeholder="inserte un nombre"></label></p>
+      <!--placeholder es el dato de ayuda al usuario-->
+      HTML 77 | Página
+      <p><label>Edad: <input type="text" name="edad" disabled></label></p>
+      <!--atributo inhabilitado-->
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!---formulario sin validar con el atributo formnovalidate -->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Correo: <input type="email" name="correo"></label></p>
+      <p>
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Grabar" formnovalidate>
+      </p>
+    </form>
+  </section>
+  <!-- entrada email como campo requerido-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Correo: <input type="email" name="correo" required></label></p>
+      <p>
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Grabar" formnovalidate>
+      </p>
+      HTML 79 | Página
+    </form>
+  </section>
+  <!--campos de entrada con el atributo pattern mediante expresiones regulares-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Código Postal: <input pattern="[0-9]{5}" name="cp" title="Inserte su código postal"></label></p>
+      <!--title aparece en la ayuda-->
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!--declaracion de un  campo múltiple, este permite ingresar mas de un dato separadas de una coma-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Correo: <input type="email" name="correo" multiple></label></p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!---desactivando el autocompletado-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Buscar: <input type="search" name="buscar" autocomplete="off"></label></p>
+      <p><input type="submit" value="Buscar"></p>
+    </form>
+  </section>
+  <!---atributo autofocus, sugiere que dato llenar primero-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Nombre: <input type="text" name="nombre"></label></p>
+      <p><label>Edad: <input type="text" name="edad" autofocus></label></p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
+  <!--desactiva el control de ortografia-->
+  <section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><label>Texto: <textarea name="texto" cols="50" rows="6" spellcheck="false"></textarea></label></p>
+      <p><input type="submit" value="Enviar"></p>
+    </form>
+  </section>
 </body>
+
 </html>
